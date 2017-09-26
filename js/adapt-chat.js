@@ -29,8 +29,6 @@ define(function(require) {
 		},
 
 		setupListItems: function() {
-
-			// Set item positions alternating R and L
 			var $stacklistItems = this.$(".stacklist-items");
 			$stacklistItems.height($stacklistItems.height());
 			var $items = this.$(".stacklist-item");
@@ -43,6 +41,15 @@ define(function(require) {
 				$el.offset(offset).hide();
 			});
 			this.$(".stacklist-button").show();
+
+			var context = this;
+			_.each(this.model.get('_items'), function(item){
+				context.setImage(item);
+			});
+		},
+
+		setImage: function(item) {
+			console.log(item);
 		},
 
 		nextItem: function() {
