@@ -1,0 +1,21 @@
+{
+  "name": "adapt-chat",
+  "description": "Items fly in one at a time, alternating from left to right, when the learner clicks a button. Demo available.",
+  "version": "1.0.3",
+  "framework": "^2.0.0",
+  "displayName": "Chat",
+  "component": "chat",
+  "main": "/js/adapt-chat.js",
+  "homepage": "https://github.com/danielstorey/adapt-chat",
+  "repository": "git://github.com/danielstorey/adapt-chat.git",
+  "issues": "https://github.com/danielstorey/adapt-chat/issues",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3",
+  "authors": [
+    "Dan Storey <danielstorey@gmail.com>",
+    "Simon Date <simon.date@kcl.ac.uk>"
+  ]
+}
