@@ -1,39 +1,52 @@
 {
+    "_id": "c-05",
+    "_parentId": "b-05",
     "_type": "component",
-    "_component": "stacklist",
+    "_component": "chat",
     "_classes": "",
     "_layout": "full",
-    "title": "Stacklist",
-    "displayTitle": "Stacklist",
+    "title": "Chat",
+    "displayTitle": "Chat",
     "body": "",
-	"_button": {
-		"startText": "Let's get started",
-		"continueText": "Continue"
-	},
-    "_items": [
-        {
-            "body": "This component is useful for making boring text lists that little bit more interactive.",
-            "next": "Show me more!"
-        },
-        {
-            "body": "List items slide in from alternating sides.",
-            "next": "... and you can modify this text!"
-        },
-        {
-            "body": "There is no limit to the number of items you can have.",
-            "next": "It's localisation friendly"
-        },
-        {
-            "body": "Although if you have too many it will be a bit boring.",
-            "next": "... but you can customize it"
-        },     
-        {
-            "body": "At least now you get the gist of how this works.",
-            "next": "I get it!"
-        },  
-        {
-            "body": "That's pretty much it.",
-            "next": "Step 5"
-        }        
+    "_button": {
+      "startText": "Let's get started",
+      "continueText": "Continue"
+    },
+    "_participants": [{
+      "name": "Simon",
+      "_icon": "course/en/images/single_width_small.jpg"
+    }, {
+      "name": "Louise",
+      "_icon": "course/en/images/single_width_small.jpg"
+    }],
+    "_items": [{
+        "body": "Wow this group chat is really cool",
+        "participant": 1,
+        "_timeUntilNext": "1",
+        "button": {
+          "_isEnabled": true,
+          "buttonText": "I agree"
+        }
+      },
+      {
+        "body": "List items slide in from alternating sides.",
+        "next": "... and you can modify this text!"
+      },
+      {
+        "body": "There is no limit to the number of items you can have.",
+        "next": "It's localisation friendly"
+      },
+      {
+        "body": "Although if you have too many it will be a bit boring.",
+        "next": "... but you can customize it"
+      },
+      {
+        "body": "At least now you get the gist of how this works.",
+        "next": "I get it!"
+      },
+      {
+        "body": "That's pretty much it.",
+        "next": "Step 5"
+      }
     ]
-}
+  }
