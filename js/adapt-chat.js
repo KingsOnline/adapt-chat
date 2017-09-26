@@ -3,7 +3,7 @@ define(function(require) {
 	var ComponentView = require('coreViews/componentView');
 	var Adapt = require('coreJS/adapt');
 
-	var Dialogue = ComponentView.extend({
+	var Chat = ComponentView.extend({
 
 		events: {
 			"click .stacklist-next": "nextItem"
@@ -80,8 +80,8 @@ define(function(require) {
 		}
 	});
 
-	Adapt.register('dialogue', Dialogue);
+	Adapt.register('chat', Chat);
 
-	return Dialogue;
+	return Chat;
 
 });
