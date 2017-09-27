@@ -16,12 +16,22 @@
 }
 
 .stacklist-item {
+	.stacklist-transition(@stacklist-item-time);
+}
+
+.chat-icon {
+	width: 10%;
+	position: absolute;
+}
+
+.chat-text {
+	width: 70%;
+	margin-left: 15%;
 	position: relative;
 	padding: 20px;
 	margin-bottom: 8px;
 	background-color: @primary-color;
 	color: @primary-color-inverted;
-	.stacklist-transition(@stacklist-item-time);
 }
 
 .stacklist-button {

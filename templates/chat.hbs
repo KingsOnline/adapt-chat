@@ -1,25 +1,27 @@
 <div class="stacklist-inner component-inner" role="region" aria-label="{{_globals._components._text.ariaRegion}}">
-    {{> component this}}
+  {{> component this}}
 
-    <div class="stacklist-widget component-widget">
-        <div class="stacklist-items">
-            {{#each _items}}
-            <div class="stacklist-item">
-              <div class="chat-icon">
-                <img class="chat-icon-inner" />
-              </div>
-                {{#if this.length}}
-                    {{{a11y_text this}}}
-                {{else}}
-                    {{{a11y_text body}}}
-                {{/if}}
-            </div>
-            {{/each}}
-            <div class="stacklist-button">
-                <button class="stacklist-next" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button">
+  <div class="stacklist-widget component-widget">
+    <div class="stacklist-items">
+      {{#each _items}}
+        <div class="stacklist-item">
+          <div class="chat-icon">
+            <img class="chat-icon-inner" src="" />
+          </div>
+          <div class="chat-text">
+            {{#if this.length}}
+              {{{a11y_text this}}}
+            {{else}}
+              {{{a11y_text body}}}
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+      <div class="stacklist-button">
+        <button class="stacklist-next" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button">
 	                {{{_button.startText}}}
                 </button>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
