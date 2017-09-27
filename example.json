@@ -21,7 +21,7 @@
     }],
     "_items": [{
         "body": "Wow this group chat is really cool",
-        "participant": 1,
+        "_participant": 1,
         "_timeUntilNext": "1",
         "button": {
           "_isEnabled": true,

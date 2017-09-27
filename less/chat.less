@@ -17,22 +17,38 @@
 
 .stacklist-item {
 	.stacklist-transition(@stacklist-item-time);
+	text-align: right;
 }
 
 .chat-icon {
 	width: 10%;
 	position: absolute;
+	right: 0;
 }
 
 .chat-text {
-	width: 70%;
-	margin-left: 15%;
+	max-width: 60%;
+	margin-right: 15%;
+	display: inline-block;
 	position: relative;
 	padding: 20px;
 	margin-bottom: 8px;
 	background-color: @primary-color;
 	color: @primary-color-inverted;
 }
+
+.stacklist-item:not(.participant-0) {
+	text-align: left;
+	.chat-icon {
+		left: 0;
+	}
+
+	.chat-text {
+		margin-left: 15%;
+	}
+}
+
+
 
 .stacklist-button {
 	display: none;

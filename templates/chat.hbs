@@ -4,9 +4,10 @@
   <div class="stacklist-widget component-widget">
     <div class="stacklist-items">
       {{#each _items}}
-        <div class="stacklist-item">
-          <div class="chat-icon">
+        <div class="stacklist-item participant-{{_participant}}">
+          <div class="chat-icon ">
             <img class="chat-icon-inner" src="" />
+            <div class="chat-icon-name"> </div>
           </div>
           <div class="chat-text">
             {{#if this.length}}

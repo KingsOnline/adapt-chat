@@ -49,9 +49,10 @@ define(function(require) {
     },
 
     setImage: function(index, item) {
-      var $item = this.$('.chat-icon-inner').get(index);
-      console.log(this.model.get('_participants')[item._participant]);
-      $($item).attr('src', this.model.get('_participants')[item._participant]._icon);
+      var $icon = this.$('.chat-icon-inner').get(index);
+      $($icon).attr('src', this.model.get('_participants')[item._participant]._icon);
+			var $name = this.$('.chat-icon-name').get(index);
+			$($name).html(this.model.get('_participants')[item._participant].name);
     },
 
     nextItem: function() {
