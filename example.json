@@ -7,46 +7,56 @@
     "_layout": "full",
     "title": "Chat",
     "displayTitle": "Chat",
-    "body": "",
+    "body": "Let's listen into a friendly workplace conversation happening in the King's Online office.",
     "_button": {
-      "startText": "Let's get started",
       "continueText": "Continue"
     },
     "_participants": [{
       "name": "Simon",
-      "_icon": "course/en/images/single_width_small.jpg"
+      "_icon": "course/en/images/simon.jpg"
     }, {
       "name": "Louise",
-      "_icon": "course/en/images/single_width_small.jpg"
+      "_icon": "course/en/images/louise.jpg"
+    },
+    {
+      "name": "Fabio",
+      "_icon": "course/en/images/fabio.jpg"
     }],
     "_items": [{
         "body": "Wow this group chat is really cool",
         "_participant": 1,
-        "_timeUntilNext": "1",
-        "button": {
+        "_timeToShow": "2",
+        "_button": {
           "_isEnabled": true,
-          "buttonText": "I agree"
+          "buttonText": "One new message"
         }
       },
       {
-        "body": "List items slide in from alternating sides.",
-        "next": "... and you can modify this text!"
+        "body": "Yes, I agree",
+        "_participant": 0,
+        "_timeToShow": "2",
+        "_button": {
+          "_isEnabled": false,
+          "buttonText": "turn 2"
+        }
       },
       {
-        "body": "There is no limit to the number of items you can have.",
-        "next": "It's localisation friendly"
-      },
-      {
-        "body": "Although if you have too many it will be a bit boring.",
-        "next": "... but you can customize it"
-      },
-      {
-        "body": "At least now you get the gist of how this works.",
-        "next": "I get it!"
-      },
-      {
-        "body": "That's pretty much it.",
-        "next": "Step 5"
-      }
+          "body": "I wonder what else we can do with it?",
+          "_participant": 2,
+          "_timeToShow": "3",
+          "_button": {
+            "_isEnabled": false,
+            "buttonText": "turn 3"
+          }
+        },
+        {
+          "body": "When can we use it in production.",
+          "_participant": 2,
+          "_timeToShow": "1.5",
+          "_button": {
+            "_isEnabled": false,
+            "buttonText": "I agree"
+          }
+        }
     ]
   }

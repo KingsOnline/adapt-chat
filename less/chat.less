@@ -1,5 +1,5 @@
 @stacklist-time: 0.25s;
-@stacklist-item-time: 0.25s;
+@chat-line-time: 0.25s;
 
 .stacklist-transition(@time) {
 	-webkit-transition: @time;
@@ -9,26 +9,29 @@
 	transition: @time;
 }
 
-.stacklist-items {
+.chat-lines {
 	position: relative;
 	margin-bottom: -8px;
 	.stacklist-transition(@stacklist-time);
 }
 
-.stacklist-item {
-	.stacklist-transition(@stacklist-item-time);
-	text-align: right;
+.chat-line {
+	.stacklist-transition(@chat-line-time);
+	text-align: left;
+	min-height: 90px;
 }
 
 .chat-icon {
 	width: 10%;
 	position: absolute;
-	right: 0;
+
+	left: 0;
 }
 
 .chat-text {
 	max-width: 60%;
-	margin-right: 15%;
+
+	margin-left: 15%;
 	display: inline-block;
 	position: relative;
 	padding: 20px;
@@ -37,18 +40,18 @@
 	color: @primary-color-inverted;
 }
 
-.stacklist-item:not(.participant-0) {
-	text-align: left;
+.chat-line.participant-0 {
+	text-align: right;
+
 	.chat-icon {
-		left: 0;
+		right: 0;
+		left: auto;
 	}
 
 	.chat-text {
-		margin-left: 15%;
+		margin-right: 15%;
 	}
 }
-
-
 
 .stacklist-button {
 	display: none;

@@ -2,10 +2,10 @@
   {{> component this}}
 
   <div class="stacklist-widget component-widget">
-    <div class="stacklist-items">
+    <div class="chat-lines">
       {{#each _items}}
-        <div class="stacklist-item participant-{{_participant}}">
-          <div class="chat-icon ">
+        <div class="chat-line participant-{{_participant}}">
+          <div class="chat-icon">
             <img class="chat-icon-inner" src="" />
             <div class="chat-icon-name"> </div>
           </div>
@@ -20,8 +20,8 @@
       {{/each}}
       <div class="stacklist-button">
         <button class="stacklist-next" aria-label="{{_globals._accessibility._ariaLabels.next}}" role="button">
-	                {{{_button.startText}}}
-                </button>
+	                {{{_items.[0]._button.buttonText}}}
+        </button>
       </div>
     </div>
   </div>
