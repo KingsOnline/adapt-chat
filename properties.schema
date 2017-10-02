@@ -29,10 +29,39 @@
       "validators": [],
       "help": "This is the instruction text"
     },
-    "_items": {
+    "_participants": {
       "type": "array",
       "required": true,
       "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Participant name",
+            "default": "",
+            "validators": ["required"],
+            "help": "the first particpant appears on the right. The others on the left.",
+            "translatable": true
+          },
+          "_icon": {
+            "type": "string",
+            "required": true,
+            "default": "The participant's icon",
+            "title": "Participant name",
+            "inputType": "Asset:image",
+            "validators": ["required"]
+          }
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Chat lines",
       "items": {
         "type": "object",
         "required": true,
@@ -41,41 +70,55 @@
             "type": "string",
             "required": true,
             "inputType": "TextArea",
-            "title": "Item Body",
+            "title": "Line text",
             "default": "",
             "validators": ["required"],
-            "help": "This is the optional item body text",
             "translatable": true
+          },
+          "_participant": {
+            "type": "number",
+            "required": true,
+            "default": 0,
+            "title": "Participant number",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "The particpant who is speaking. The first participant is 0, the second 1 etc."
+          },
+          "_timeToShow": {
+            "type": "number",
+            "required": true,
+            "default": 2,
+            "title": "Time to show",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "The delay in seconds between each line of text appearing. Works with and without button."
+          },
+          "_button": {
+            "type": "object",
+            "required": false,
+            "properties": {
+              "_isEnabled": {
+                "type": "boolean",
+                "default": false,
+                "title": "Show button",
+                "help": "If shown the line requires a button press to show. If not the line appears automatically after the delay.",
+                "inputType": "Checkbox",
+                "validators": []
+              },
+              "buttonText": {
+                "type": "string",
+                "required": false,
+                "default": "Continue",
+                "inputType": "Text",
+                "validators": [],
+                "title": "The text that appears on the button. Note the first line has to be a button.",
+                "help": "",
+                "translatable": true
+              }
+            }
           }
         }
       }
-    },
-    "_button": {
-      "type": "object",
-      "required": false,
-      "properties": {
-        "startText": {
-          "type": "string",
-          "required": false,
-          "default": "Click here to begin",
-          "inputType": "Text",
-          "validators": [],
-          "title": "Start button text",
-          "help": "",
-          "translatable": true
-        },
-        "continueText": {
-          "type": "string",
-          "required": false,
-          "default": "Next",
-          "inputType": "Text",
-          "validators": [],
-          "title": "Next button text",
-          "help": "",
-          "translatable": true
-        }
-      }
-
     }
   }
 }

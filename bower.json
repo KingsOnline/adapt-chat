@@ -1,21 +1,20 @@
 {
   "name": "adapt-chat",
-  "description": "Items fly in one at a time, alternating from left to right, when the learner clicks a button. Demo available.",
-  "version": "1.0.3",
+  "description": "Creates a simulated 'group chat', with memebers with icons and lines of dialog.",
+  "version": "1.0.0",
   "framework": "^2.0.0",
   "displayName": "Chat",
   "component": "chat",
   "main": "/js/adapt-chat.js",
-  "homepage": "https://github.com/danielstorey/adapt-chat",
-  "repository": "git://github.com/danielstorey/adapt-chat.git",
-  "issues": "https://github.com/danielstorey/adapt-chat/issues",
+  "homepage": "https://github.com/kingsonline/adapt-chat",
+  "repository": "git://github.com/kingsonline/adapt-chat.git",
+  "issues": "https://github.com/kingsonline/adapt-chat/issues",
   "keywords": [
     "adapt-plugin",
     "adapt-component"
   ],
   "license": "GPLv3",
   "authors": [
-    "Dan Storey <danielstorey@gmail.com>",
     "Simon Date <simon.date@kcl.ac.uk>"
   ]
 }
