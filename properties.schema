@@ -32,7 +32,7 @@
     "_participants": {
       "type": "array",
       "required": true,
-      "title": "Items",
+      "title": "Participants",
       "items": {
         "type": "object",
         "required": true,
@@ -51,7 +51,7 @@
             "type": "string",
             "required": true,
             "default": "The participant's icon",
-            "title": "Participant name",
+            "title": "Participant icon",
             "inputType": "Asset:image",
             "validators": ["required"]
           }
@@ -111,8 +111,8 @@
                 "default": "Continue",
                 "inputType": "Text",
                 "validators": [],
-                "title": "The text that appears on the button. Note the first line has to be a button.",
-                "help": "",
+                "title": "Button text",
+                "help": "The text that appears on the button. Note the first line has to be a button.",
                 "translatable": true
               }
             }
