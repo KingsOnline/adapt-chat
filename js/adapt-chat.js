@@ -63,7 +63,7 @@ define(function(require) {
       this.model.set("_stage", stage);
       this.$(".stacklist-next").hide();
       var context = this;
-      console.log(context.model.get("_items")[stage]._timeToShow);
+      Adapt.log.debug(context.model.get("_items")[stage]._timeToShow);
       setTimeout(function() {
         if (context.model.get("_items")[stage]._button._isEnabled || stage === 0) {
           var continueText = context.model.get("_items")[stage]._button.buttonText || "Start";
