@@ -9,63 +9,69 @@
 	transition: @time;
 }
 
-.chat-lines {
-	position: relative;
-	margin-bottom: -8px;
-	.stacklist-transition(@stacklist-time);
-}
+.chat-component {
+	.chat-lines {
+		position: relative;
+		margin-bottom: -8px;
+		.stacklist-transition(@stacklist-time);
+	}
 
-.chat-line {
-	.stacklist-transition(@chat-line-time);
-	text-align: left;
-	min-height: 90px;
-}
-
-.chat-icon {
-	width: 10%;
-	position: absolute;
-
-	left: 0;
-}
-
-.chat-text {
-	max-width: 60%;
-
-	margin-left: 15%;
-	display: inline-block;
-	position: relative;
-	padding: 20px;
-	margin-bottom: 8px;
-	background-color: @primary-color;
-	color: @primary-color-inverted;
-}
-
-.chat-line.participant-0 {
-	text-align: right;
+	.chat-line {
+		.stacklist-transition(@chat-line-time);
+		text-align: left;
+		min-height: 90px;
+		margin-bottom: 10px;
+	}
 
 	.chat-icon {
-		right: 0;
-		left: auto;
+		width: 10%;
+		position: absolute;
+		left: 0;
 	}
 
 	.chat-text {
-		background-color: @primary-color-inverted;
-		color: @primary-color;
-		border: 1px solid @primary-color;
-		margin-right: 15%;
+		max-width: 60%;
+		margin-left: 15%;
+		display: inline-block;
+		position: relative;
+		padding: 20px;
+		margin-bottom: 8px;
+		background-color: @primary-color;
+		color: @primary-color-inverted;
 	}
-}
 
-.stacklist-button {
-	display: none;
-	position: absolute;
-	top: 0;
-	height: 53px;
-	width: 100%;
-	text-align: center;
-	.stacklist-transition(@stacklist-time);
+	.chat-line.participant-0 {
+		text-align: right;
 
-	button {
-		width: 210px;
+		.chat-icon {
+			right: 0;
+			left: auto;
+		}
+
+		.chat-text {
+			background-color: @primary-color-inverted;
+			color: @primary-color;
+			border: 1px solid @primary-color;
+			margin-right: 15%;
+		}
+	}
+	@media (max-width: @device-width-medium) {
+		.chat-icon-name {
+			display: none;
+		}
+	}
+
+	.stacklist-button {
+		display: none;
+		position: absolute;
+		top: 0;
+		height: 53px;
+		width: 100%;
+		text-align: center;
+		.stacklist-transition(@stacklist-time);
+
+		button {
+			width: 210px;
+		}
 	}
 }
