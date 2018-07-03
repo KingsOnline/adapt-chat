@@ -1,43 +1,49 @@
-# adapt-stacklist
+# adapt-chat
 
-**Stacklist** is a *presentation component* Created by Dan storey.
-<img align="right" src="https://raw.githubusercontent.com/danielstorey/assets/master/stacklist-demo.png" alt="Stacklist in action">
+**Chat** is a *presentation component* Created by the King's Online Dev team.
 
-The **Stacklist** component displays list items one at a time when the learner clicks a button. Items fly into view from left and right alternately.
+<img src="https://cdn.rawgit.com/KingsOnline/repo-files/f54de408/chat.gif" alt="An example of the Chat component">
 
-[**Click here for an interactive demo**](https://danielstorey.github.io/adapt-demo-course/#/id/co-main)
-
-##Installation
-
-Run the following from the command line: `adapt install adapt-stacklist`
+The **Chat** component offers scenario based learning. It recreates a "group chat" that two or more people may have on a messaging platform.
 
 ## Settings Overview
 
-The attributes listed below are used in *components.json* to configure **Stacklist**, and are properly formatted as JSON in [*example.json*](https://github.com/danielstorey/adapt-stacklist/example.json).
+The attributes listed below are used in *components.json* to configure **Chat**, and are properly formatted as JSON in *example.json* file. In the Authoring Tool use the attributes below.
 
 ### Attributes
 
-For core model attributes see [**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes). The attributes listed below are specific to the `Stacklist` component.
-
-**_component** (string): This value must be: `stacklist`.
+For core model attributes see [**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes). The attributes listed below are specific to the `Chat` component.
 
 **_button** (object): This allows you to specify the default button text (Optional).
 
->**startText** (string): The text to display before any items are shown (Optional - defaults to "Click here to begin")
-
 >**continueText** (string): The text to display to trigger the next item (Optional - defaults to "Next")
 
-**_items** (array): Each item represents a sliding element.
+**_participants** (object): This allows you to specify the participants in the chat (Optional).
 
->**body** (string): The main text for sliding item.
+>**name** (string): The name of the participant
 
->**next** (string): This text becomes the 'next' button.
+>**_icon** (string): An image of the participant
+
+
+**_items** (array): Each item represents a line of text of the chat.
+
+>**body** (string): The text for the line of the chat.
+
+>**_participant** (number): The participant who said this line, from the *_participants* object. Note that the first participant is 0, the second is 1 etc.
+
+>**_timeToShow** (number): The number of seconds to show this line. If the *_button* is enabled the time to show the button. Otherwise the time for the line to be invoked.
+
+>**_button** (object): Lines can be invoked by a button or automatically
+
+ >**_button._isEnabled** (boolean): Decide if this line should have a button that invokes it.
+
+>**_button.buttonText** (text): The text of the button for this line.
 
 ## Limitations
 
 No known limitations
 
 ----------------------------
-**Version number:**  1.0.2
-**Framework versions:**  2.0
-**Author / maintainer:** Dan Storey
+**Version number:**  2.0.0
+**Framework versions:** >= 2.0
+**Author / maintainer:** [Simon Date](mailto:simon.date@kcl.ac.uk)
