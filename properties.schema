@@ -39,11 +39,10 @@
         "properties": {
           "name": {
             "type": "string",
-            "required": true,
+            "required": false,
             "inputType": "Text",
             "title": "Participant name",
             "default": "",
-            "validators": ["required"],
             "help": "the first particpant appears on the right. The others on the left.",
             "translatable": true
           },
@@ -77,20 +76,18 @@
           },
           "_participant": {
             "type": "number",
-            "required": true,
+            "required": false,
             "default": 0,
             "title": "Participant number",
             "inputType": "Number",
-            "validators": ["required", "number"],
             "help": "The particpant who is speaking. The first participant is 0, the second 1 etc."
           },
           "_timeToShow": {
             "type": "number",
-            "required": true,
+            "required": false,
             "default": 2,
             "title": "Time to show",
             "inputType": "Number",
-            "validators": ["required", "number"],
             "help": "The delay in seconds between each line of text appearing. Works with and without button."
           },
           "_button": {
