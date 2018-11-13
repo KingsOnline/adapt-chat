@@ -29,6 +29,15 @@
       "validators": [],
       "help": "This is the instruction text"
     },
+    "_singleParticipant": {
+      "type": "string",
+      "required": false,
+      "inputType": "Text",
+      "title": "One person only",
+      "default": "",
+      "help": "All chat is on the left hand side",
+      "translatable": true
+    },
     "_participants": {
       "type": "array",
       "required": true,
