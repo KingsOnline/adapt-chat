@@ -11,6 +11,7 @@
     "_button": {
       "continueText": "Continue"
     },
+    "_singleParticipant": false,
     "_participants": [{
       "name": "Simon",
       "_icon": "course/en/images/simon.jpg"

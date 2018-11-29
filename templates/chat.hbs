@@ -4,7 +4,7 @@
   <div class="stacklist-widget component-widget">
     <div class="chat-lines">
       {{#each _items}}
-        <div class="chat-line participant-{{_participant}}">
+        <div class="chat-line {{#if ../_singleParticipant}}sole-participant{{else}}participant-{{_participant}}{{/if}}">
           <div class="chat-icon">
             <img class="chat-icon-inner" src="" />
             <div class="chat-icon-name"> </div>
