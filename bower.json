@@ -1,7 +1,7 @@
 {
   "name": "adapt-chat",
   "description": "Creates a scenario driven 'group chat'",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "framework": ">=2.0.0",
   "displayName": "Chat",
   "component": "chat",
