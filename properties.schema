@@ -94,7 +94,7 @@
           "_timeToShow": {
             "type": "number",
             "required": false,
-            "default": 2,
+            "default": 0,
             "title": "Time to show",
             "inputType": "Number",
             "help": "The delay in seconds between each line of text appearing. Works with and without button."
