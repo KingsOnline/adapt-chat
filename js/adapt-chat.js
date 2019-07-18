@@ -65,58 +65,34 @@ define(function(require) {
     },
 
     setStage: function(stage) {
-      this.model.set("_stage", stage);
-      this.$(".stacklist-next").hide();
-      var context = this;
-      Adapt.log.debug(context.model.get("_items")[stage]._timeToShow);
-      setTimeout(function() {
-        if (context.model.get("_items")[stage]._button._isEnabled || stage === 0) {
-          var continueText = context.model.get("_items")[stage]._button.buttonText || "Start";
-          context.$(".stacklist-next").html(continueText);
-        }
-        context.showNextStage(stage);
-      }, context.model.get("_items")[stage]._timeToShow * 1000);
-    },
+			this.model.set("_stage", stage);
+			var continueText = this.model.get("_items")[stage].next || this.model.get("_button").continueText;
+			this.$(".stacklist-next").html(continueText);
+			var $item = this.$(".stacklist-item").eq(stage);
+			$item.show();
+			var h = $item.outerHeight(true);
 
-    showNextStage: function(stage) {
-      var $item = this.$(".chat-line").eq(stage);
-      $item.show();
-      var h = $item.outerHeight(true);
-      this.$(".stacklist-button").css({
-        top: "+=" + h
-      });
-      setTimeout(function() {
-        $item.css({
-          left: 0
-        });
-      }, 250);
+			this.$(".stacklist-button").css({top: "+=" + h});
+			setTimeout(function() {
+				$item.css({left: 0});
+			}, 250);
 
-      if (this.model.get("_items").length - 1 === stage) { // reached the end
-        this.onComplete();
-      } else if (this.checkNextButton(stage + 1)) { // show next button after x seconds
-        this.$(".stacklist-next").show();
-      } else { // show next item after x seconds
-        this.nextItem();
-      }
-    },
+			if (this.model.get("_items").length - 1 === stage) {
+				this.onComplete()
+			}
+		},
 
-    checkNextButton: function(nextStage) {
-      return this.model.get("_items")[nextStage]._button._isEnabled;
-    },
+		onComplete: function () {
 
-    onComplete: function() {
+			var $button = this.$(".stacklist-button");
+			$button.css({top: $(window).height()});
+			setTimeout(function() {
+				$button.remove();
+			}, 500);
 
-      var $button = this.$(".stacklist-button");
-      $button.css({
-        top: $(window).height()
-      });
-      setTimeout(function() {
-        $button.remove();
-      }, 500);
-
-      this.setCompletionStatus();
-    }
-  });
+			this.setCompletionStatus();
+		}
+	});
 
   Adapt.register('chat', Chat);
 
