@@ -68,7 +68,7 @@ define(function(require) {
 			this.model.set("_stage", stage);
 			var continueText = this.model.get("_items")[stage].next || this.model.get("_button").continueText;
 			this.$(".stacklist-next").html(continueText);
-			var $item = this.$(".stacklist-item").eq(stage);
+			var $item = this.$(".chat-line").eq(stage);
 			$item.show();
 			var h = $item.outerHeight(true);
 
