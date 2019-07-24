@@ -5,12 +5,12 @@
     <div class="chat-lines" role="list">
       {{#each _items}}
         <div class="chat-line {{#if ../_singleParticipant}}sole-participant{{else}}participant-{{_participant}}{{/if}}" role="listitem">
-          <!--<div class="chat-icon">
+          <div class="chat-icon">
             <img class="chat-icon-inner" src="" />
             <div class="chat-icon-name"> </div>
-          </div>-->
+          </div>
           <div class="chat-text">
-{{#if this.length}}
+	    {{#if this.length}}
               {{{a11y_text this}}}
             {{else}}
               {{{a11y_text body}}}
